@@ -782,6 +782,8 @@ function toast(msg,cor="var(--green)") {
   t.style.display="block"; t.classList.remove("hide");
   clearTimeout(toastTimer);
   toastTimer=setTimeout(()=>{ t.classList.add("hide"); setTimeout(()=>{t.style.display="none";t.classList.remove("hide");},350); },2000);
+}
+
 // ── service worker ────────────────────────────────────────
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
